@@ -11,6 +11,14 @@
 		EE23DCB22B73D66F004E2292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCB12B73D66F004E2292 /* ContentView.swift */; };
 		EE23DCB42B73D670004E2292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE23DCB32B73D670004E2292 /* Assets.xcassets */; };
 		EE23DCB72B73D671004E2292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE23DCB62B73D671004E2292 /* Preview Assets.xcassets */; };
+		EE23DCBF2B73F00A004E2292 /* LengthUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCBE2B73F00A004E2292 /* LengthUnits.swift */; };
+		EE23DCC12B73F01B004E2292 /* VolumeUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCC02B73F01B004E2292 /* VolumeUnits.swift */; };
+		EE23DCC32B73F025004E2292 /* TimeUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCC22B73F025004E2292 /* TimeUnits.swift */; };
+		EE23DCC52B73F031004E2292 /* TemperatureUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCC42B73F031004E2292 /* TemperatureUnits.swift */; };
+		EE23DCC82B73F22A004E2292 /* UnitConversor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCC72B73F22A004E2292 /* UnitConversor.swift */; };
+		EE73FD062B743C720045357C /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD052B743C720045357C /* UnitType.swift */; };
+		EE73FD092B7446690045357C /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD082B7446690045357C /* ConverterView.swift */; };
+		EE73FD0B2B7446820045357C /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD0A2B7446820045357C /* ConverterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		EE23DCB12B73D66F004E2292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE23DCB32B73D670004E2292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE23DCB62B73D671004E2292 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE23DCBE2B73F00A004E2292 /* LengthUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnits.swift; sourceTree = "<group>"; };
+		EE23DCC02B73F01B004E2292 /* VolumeUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeUnits.swift; sourceTree = "<group>"; };
+		EE23DCC22B73F025004E2292 /* TimeUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnits.swift; sourceTree = "<group>"; };
+		EE23DCC42B73F031004E2292 /* TemperatureUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnits.swift; sourceTree = "<group>"; };
+		EE23DCC72B73F22A004E2292 /* UnitConversor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConversor.swift; sourceTree = "<group>"; };
+		EE73FD052B743C720045357C /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		EE73FD082B7446690045357C /* ConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
+		EE73FD0A2B7446820045357C /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,8 @@
 		EE23DCAE2B73D66F004E2292 /* UnitConverter */ = {
 			isa = PBXGroup;
 			children = (
+				EE73FD072B7446240045357C /* Views */,
+				EE23DCBD2B73EF8B004E2292 /* Helper */,
 				EE23DCAF2B73D66F004E2292 /* UnitConverterApp.swift */,
 				EE23DCB12B73D66F004E2292 /* ContentView.swift */,
 				EE23DCB32B73D670004E2292 /* Assets.xcassets */,
@@ -65,6 +83,28 @@
 				EE23DCB62B73D671004E2292 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE23DCBD2B73EF8B004E2292 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EE23DCBE2B73F00A004E2292 /* LengthUnits.swift */,
+				EE23DCC02B73F01B004E2292 /* VolumeUnits.swift */,
+				EE23DCC22B73F025004E2292 /* TimeUnits.swift */,
+				EE23DCC42B73F031004E2292 /* TemperatureUnits.swift */,
+				EE23DCC72B73F22A004E2292 /* UnitConversor.swift */,
+				EE73FD052B743C720045357C /* UnitType.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EE73FD072B7446240045357C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE73FD082B7446690045357C /* ConverterView.swift */,
+				EE73FD0A2B7446820045357C /* ConverterViewModel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE73FD092B7446690045357C /* ConverterView.swift in Sources */,
+				EE73FD0B2B7446820045357C /* ConverterViewModel.swift in Sources */,
 				EE23DCB22B73D66F004E2292 /* ContentView.swift in Sources */,
+				EE23DCBF2B73F00A004E2292 /* LengthUnits.swift in Sources */,
 				EE23DCB02B73D66F004E2292 /* UnitConverterApp.swift in Sources */,
+				EE73FD062B743C720045357C /* UnitType.swift in Sources */,
+				EE23DCC32B73F025004E2292 /* TimeUnits.swift in Sources */,
+				EE23DCC82B73F22A004E2292 /* UnitConversor.swift in Sources */,
+				EE23DCC52B73F031004E2292 /* TemperatureUnits.swift in Sources */,
+				EE23DCC12B73F01B004E2292 /* VolumeUnits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
