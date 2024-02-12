@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE05EB242B75958700B00CFD /* InputUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05EB232B75958600B00CFD /* InputUnitView.swift */; };
 		EE23DCB02B73D66F004E2292 /* UnitConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCAF2B73D66F004E2292 /* UnitConverterApp.swift */; };
 		EE23DCB22B73D66F004E2292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE23DCB12B73D66F004E2292 /* ContentView.swift */; };
 		EE23DCB42B73D670004E2292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE23DCB32B73D670004E2292 /* Assets.xcassets */; };
@@ -19,9 +20,12 @@
 		EE73FD062B743C720045357C /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD052B743C720045357C /* UnitType.swift */; };
 		EE73FD092B7446690045357C /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD082B7446690045357C /* ConverterView.swift */; };
 		EE73FD0B2B7446820045357C /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73FD0A2B7446820045357C /* ConverterViewModel.swift */; };
+		EEA36B492B7AA18000008610 /* OutputUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA36B482B7AA18000008610 /* OutputUnitView.swift */; };
+		EEA36B4B2B7AA30C00008610 /* UnitTypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA36B4A2B7AA30C00008610 /* UnitTypeSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE05EB232B75958600B00CFD /* InputUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUnitView.swift; sourceTree = "<group>"; };
 		EE23DCAC2B73D66F004E2292 /* UnitConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE23DCAF2B73D66F004E2292 /* UnitConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterApp.swift; sourceTree = "<group>"; };
 		EE23DCB12B73D66F004E2292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 		EE73FD052B743C720045357C /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		EE73FD082B7446690045357C /* ConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 		EE73FD0A2B7446820045357C /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
+		EEA36B482B7AA18000008610 /* OutputUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputUnitView.swift; sourceTree = "<group>"; };
+		EEA36B4A2B7AA30C00008610 /* UnitTypeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTypeSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE05EB212B75906F00B00CFD /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EE23DCBE2B73F00A004E2292 /* LengthUnits.swift */,
+				EE23DCC22B73F025004E2292 /* TimeUnits.swift */,
+				EE23DCC42B73F031004E2292 /* TemperatureUnits.swift */,
+				EE23DCC02B73F01B004E2292 /* VolumeUnits.swift */,
+				EE73FD052B743C720045357C /* UnitType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		EE05EB222B75908000B00CFD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE23DCC72B73F22A004E2292 /* UnitConversor.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		EE23DCA32B73D66F004E2292 = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +93,9 @@
 		EE23DCAE2B73D66F004E2292 /* UnitConverter */ = {
 			isa = PBXGroup;
 			children = (
-				EE73FD072B7446240045357C /* Views */,
+				EEA36B4C2B7AA78200008610 /* Components */,
 				EE23DCBD2B73EF8B004E2292 /* Helper */,
+				EE73FD072B7446240045357C /* Views */,
 				EE23DCAF2B73D66F004E2292 /* UnitConverterApp.swift */,
 				EE23DCB12B73D66F004E2292 /* ContentView.swift */,
 				EE23DCB32B73D670004E2292 /* Assets.xcassets */,
@@ -88,12 +115,8 @@
 		EE23DCBD2B73EF8B004E2292 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				EE23DCBE2B73F00A004E2292 /* LengthUnits.swift */,
-				EE23DCC02B73F01B004E2292 /* VolumeUnits.swift */,
-				EE23DCC22B73F025004E2292 /* TimeUnits.swift */,
-				EE23DCC42B73F031004E2292 /* TemperatureUnits.swift */,
-				EE23DCC72B73F22A004E2292 /* UnitConversor.swift */,
-				EE73FD052B743C720045357C /* UnitType.swift */,
+				EE05EB222B75908000B00CFD /* Protocols */,
+				EE05EB212B75906F00B00CFD /* Enums */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -105,6 +128,16 @@
 				EE73FD0A2B7446820045357C /* ConverterViewModel.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EEA36B4C2B7AA78200008610 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EE05EB232B75958600B00CFD /* InputUnitView.swift */,
+				EEA36B482B7AA18000008610 /* OutputUnitView.swift */,
+				EEA36B4A2B7AA30C00008610 /* UnitTypeSelectorView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE05EB242B75958700B00CFD /* InputUnitView.swift in Sources */,
 				EE73FD092B7446690045357C /* ConverterView.swift in Sources */,
 				EE73FD0B2B7446820045357C /* ConverterViewModel.swift in Sources */,
 				EE23DCB22B73D66F004E2292 /* ContentView.swift in Sources */,
@@ -186,7 +220,9 @@
 				EE23DCC32B73F025004E2292 /* TimeUnits.swift in Sources */,
 				EE23DCC82B73F22A004E2292 /* UnitConversor.swift in Sources */,
 				EE23DCC52B73F031004E2292 /* TemperatureUnits.swift in Sources */,
+				EEA36B4B2B7AA30C00008610 /* UnitTypeSelectorView.swift in Sources */,
 				EE23DCC12B73F01B004E2292 /* VolumeUnits.swift in Sources */,
+				EEA36B492B7AA18000008610 /* OutputUnitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

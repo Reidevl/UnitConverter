@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UnitConvertible {
-    // It will allow ud to convert an input value to a default unit and then makes the conversion
+    // It will allow us to convert an input value to a default unit and then makes the conversion
     var conversionFactorToBaseUnit: Double { get }
     
     func convertToBaseUnit(to value: Double) -> Double

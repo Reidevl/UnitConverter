@@ -14,6 +14,7 @@ enum UnitType: String, CaseIterable {
     case volume = "Volume"
     
     var getAllCases: [String] {
+        // Obtain an array of all units from the system converter
         switch self {
         case .temperature: return TemperatureUnits.allCases.map{$0.rawValue}
         case .length: return LengthUnits.allCases.map{$0.rawValue}
@@ -23,6 +24,7 @@ enum UnitType: String, CaseIterable {
     }
     
     var getInitialUnit: (input: String, output: String) {
+        // Obtain two initial unit type for each unit system
         switch self {
         case .temperature: return (TemperatureUnits.celsius.rawValue, TemperatureUnits.kelvin.rawValue)
         case .length: return (LengthUnits.meter.rawValue, LengthUnits.feet.rawValue)

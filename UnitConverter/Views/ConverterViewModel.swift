@@ -32,7 +32,7 @@ class ViewModel: ObservableObject {
             outputValue = TimeUnits(rawValue: outputUnit)?.convertFromBaseUnit(from: valueInBaseUnit) ?? 0
         case .volume:
             valueInBaseUnit = VolumeUnits(rawValue: inputUnit)?.convertToBaseUnit(to: userInputValue) ?? 0
-            outputValue = VolumeUnits(rawValue: outputUnit)?.convertFromBaseUnit(from: userInputValue) ?? 0
+            outputValue = VolumeUnits(rawValue: outputUnit)?.convertFromBaseUnit(from: valueInBaseUnit) ?? 0
         }
         return outputValue
     }

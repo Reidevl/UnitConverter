@@ -15,41 +15,15 @@ struct ConverterView: View {
         NavigationStack {
             Form {
                 Section {
-                    Text("\(viewModel.unitType.rawValue)")
-                    Picker("Select the unit type", selection: $viewModel.unitType) {
-                        ForEach(UnitType.allCases, id: \.self) { unit in
-                            Text("\(unit.rawValue)")
-                        }
-                    }
-                    .onChange(of: viewModel.unitType) {
-                        let types = viewModel.unitType.getInitialUnit
-                        viewModel.inputUnit = types.input
-                        viewModel.outputUnit = types.output
-                    }
+                    UnitTypeSelectorView(unitType: $viewModel.unitType, inputUnit: $viewModel.inputUnit, outputUnit: $viewModel.outputUnit)
                 }
                 
                 Section {
-                    TextField("Enter a value", value: $viewModel.inputValue, format: .number)
-                        .keyboardType(.decimalPad)
-                        .focused($unitIsFocused)
-                    
-                    Picker("Select the input Unit", selection: $viewModel.inputUnit) {
-                        ForEach(viewModel.unitType.getAllCases, id: \.self) { unit in
-                            Text("\(unit)")
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    
-                    Picker("Select the output Unit", selection: $viewModel.outputUnit) {
-                        ForEach(viewModel.unitType.getAllCases, id: \.self) { unit in
-                            Text("\(unit)")
-                        }
-                    }
-                    .pickerStyle(.segmented)
+                    InputUnitView(unitIsFocused: _unitIsFocused, inputValue: $viewModel.inputValue, inputUnit: $viewModel.inputUnit, outputUnit: $viewModel.outputUnit, allCases: viewModel.unitType.getAllCases)
                 }
                 
                 Section("Output value") {
-                    Text("\(viewModel.convertedValue.formatted()) \(viewModel.outputUnit)")
+                    OutputUnitView(convertedValue: viewModel.convertedValue, outputUnit: viewModel.outputUnit)
                 }
             }
             .navigationTitle("Units Converter")
